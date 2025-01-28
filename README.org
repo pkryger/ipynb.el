@@ -1,0 +1,50 @@
+#+STARTUP: showeverything
+#+STARTUP: literallinks
+#+OPTIONS: toc:nil num:nil author:nil
+* ipynb.el - render Jupyter notebook (ipynb) files
+:PROPERTIES:
+:CUSTOM_ID: ipynb.el---render-jupyter-notebook-(ipynb)-files
+:END:
+
+** Description
+:PROPERTIES:
+:CUSTOM_ID: description
+:END:
+The =ipynb= Emacs package is designed to render (and browse) Jupyter notebook
+(=.ipynb=) files from the confines of Emacs.  Such a functionality is useful,
+for example when reviewing a pull request with =.ipynb= files included.
+
+You need jupterlab installed on your system, for example type something like:
+#+begin_src sh
+brew install jupyterlab
+#+end_src
+
+Jupyter notebooks can be rendered inside Emacs with either
+~ipynb-find-and-render-file~ or ~ipynb-render-buffer~.  Alternatively, they can
+be browsed in a system Web browser with either ~ipynb-find-and-browse-file~ or
+~ipynb-browse-buffer~.
+
+** Installation
+:PROPERTIES:
+:CUSTOM_ID: installation
+:END:
+This package currently is *NOT* available on MELPA. You need to install it
+straight from GitHub.  One method is to relay on =use-package=, for example:
+
+#+begin_src emacs-lisp :results value silent
+(use-package ipynb
+  :defer t
+  :vc (:url "https://github.com/pkryger/ipynb.el.git"
+       :rev :newest)))
+#+end_src
+
+If you need to consume this package via MELPA, please let me know.
+
+--------------
+
+Happy coding! If you encounter any issues or have suggestions for improvements,
+please don't hesitate to reach out on the
+[[https://github.com/pkryger/ipynb.el][GitHub repository]].  Your feedback
+is highly appreciated.
+
+# LocalWords: MELPA DWIM Jupyter
