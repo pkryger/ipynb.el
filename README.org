@@ -6,6 +6,8 @@
 :CUSTOM_ID: ipynb.el---render-jupyter-notebook-(ipynb)-files
 :END:
 
+[[https://github.com/pkryger/ipynb.el/actions/workflows/test.yml][https://github.com/pkryger/ipynb.el/actions/workflows/test.yml/badge.svg]]
+
 ** Description
 :PROPERTIES:
 :CUSTOM_ID: description
