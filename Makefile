@@ -3,8 +3,11 @@ CASK_DIR := $(shell cask package-directory)
 
 files = $$(cask files | grep -Ev 'ipynb-(pkg|autoloads).el')
 
-$(CASK_DIR): Cask
+cask-install:
 	cask install
+
+$(CASK_DIR): Cask
+	$(MAKE) cask-install
 	@touch $(CASK_DIR)
 
 .PHONY: cask
